@@ -56,6 +56,8 @@ def load_data():
         df = pd.read_csv('data_for_streamlit.csv')
         with open('metrics_summary.json', 'r') as f:
             metrics = json.load(f)
+        # Calcular error absoluto
+        df['error_absoluto'] = np.abs(df['duracion_real'] - df['duracion_predicha'])
         return df, metrics
     except FileNotFoundError:
         # Datos de ejemplo si no existen los archivos
@@ -82,6 +84,9 @@ def create_sample_data():
     
     # Ajustar predicciones para que sean realistas
     df['duracion_predicha'] = df['duracion_real'] + np.random.normal(0, 15, n_samples)
+    
+    # Calcular error absoluto
+    df['error_absoluto'] = np.abs(df['duracion_real'] - df['duracion_predicha'])
     
     metrics = {
         'rmse': 35.84,
@@ -243,9 +248,6 @@ if page == "📊 Dashboard Principal":
     
     with col2:
         st.subheader("📊 Distribución de Errores")
-        
-        # Calcular errores
-        df['error_absoluto'] = np.abs(df['duracion_real'] - df['duracion_predicha'])
         
         # Histograma de errores
         fig = px.histogram(
