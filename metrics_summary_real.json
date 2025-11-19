@@ -1,0 +1,10 @@
+{
+  "rmse_regression": 34.927646087916266,
+  "r2_regression": 0.3070080065108777,
+  "mae_regression": 28.259457567489353,
+  "accuracy_classification": 0.46955719557195574,
+  "precision_macro": 0.4980403595194884,
+  "recall_macro": 0.46287207684214104,
+  "f1_macro": 0.45238145171937133,
+  "total_matches": 1084
+}
