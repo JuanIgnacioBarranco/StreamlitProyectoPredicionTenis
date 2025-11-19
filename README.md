@@ -1,18 +1,24 @@
-# 🎾 Tennis Match Duration Predictor
+# 🎾 Predictor de Duración de Partidos de Tenis - VERSIÓN FINAL ✅
 
-Aplicación web interactiva para la predicción de duración de partidos de tenis utilizando Machine Learning.
+**Estado: LISTO PARA EXAMEN FINAL**
 
-## 📋 Cuarta Entrega - Visualización e Integración
+Aplicación web interactiva para la predicción de duración de partidos de tenis utilizando Machine Learning. 
+
+⚠️ **IMPORTANTE**: La versión funcional y corregida está en `version_final_corregida/tennis_app_final.py`
+
+## 🏆 Entrega Final - Versión Corregida y Optimizada
 
 ### 🎯 Objetivo
-Crear visualizaciones interactivas y una aplicación web que permita explorar los datos y resultados del análisis de predicción de duración de partidos de tenis.
+Desarrollar un sistema completo de predicción de duración de partidos de tenis con interfaz web educativa y académicamente apropiada.
 
-### 🚀 Características
+### ✅ Mejoras y Correcciones Implementadas
 
-- **📊 Visualizaciones Interactivas**: 3 visualizaciones principales usando Altair con principios de gramática de gráficos
-- **🔍 Exploración de Datos**: Dashboard interactivo para filtrar y analizar datos
-- **🎯 Predictor en Tiempo Real**: Interfaz para probar predicciones con nuevos datos
-- **📈 Análisis Avanzado**: Análisis de residuos, importancia de features y métricas
+- **🔧 Errores Corregidos**: Solucionados todos los KeyError de métricas (rmse_regression, accuracy_classification)
+- **🚫 Funcionalidad Removida**: Eliminada sección inapropiada de "Predictor de Partidos Futuros" que predecía ganadores
+- **📚 Contenido Educativo**: Agregadas explicaciones de terminología de tenis para audiencia no especializada
+- **🎨 Formato Académico**: Limpieza de emojis innecesarios y estilo apropiado para evaluación
+- **📝 Notas Explicativas**: Aclaraciones para valores "None" en niveles de torneo
+- **🎯 Enfoque Clarificado**: Aplicación centrada exclusivamente en predicción de duración
 
 ### 🛠️ Tecnologías Utilizadas
 
@@ -22,18 +28,23 @@ Crear visualizaciones interactivas y una aplicación web que permita explorar lo
 - **Scikit-learn**: Modelos de Machine Learning
 - **Pandas & Numpy**: Manipulación de datos
 
-### 📁 Estructura del Proyecto
+### 📁 Estructura del Proyecto - Versión Final
 
-```
+```bash
 tennis-ao26_with_csv_export/
-├── tennis_app.py                           # Aplicación Streamlit principal
-├── Proy_4ta_Visualizacion_Interactiva_BarrancoJuan.ipynb  # Notebook con visualizaciones
-├── requirements.txt                        # Dependencias
-├── entrega2proy_EDA/
-│   └── matches_cleaned.csv                # Dataset principal
-├── data_for_streamlit.csv                 # Datos procesados para la app
-├── metrics_summary.json                   # Métricas del modelo
-└── README.md                              # Este archivo
+├── version_final_corregida/               # 🎯 VERSIÓN FUNCIONAL PARA EXAMEN
+│   ├── tennis_app_final.py               # ✅ Aplicación Streamlit corregida y funcional
+│   ├── matches_cleaned.csv               # Dataset principal
+│   ├── metrics_summary_real.json         # Métricas del modelo corregidas
+│   ├── requirements.txt                  # Dependencias específicas
+│   └── README.md                         # Documentación de la versión final
+├── tennis_app_mejorada.py                # Versión con API en tiempo real
+├── README_MEJORADO.md                    # Documentación completa actualizada
+├── requirements_mejorados.txt            # Dependencias completas
+├── Proy_3ra_Modelado_Mejorado_BarrancoJuan.ipynb  # Modelado final
+├── Proy_4ta_Visualizacion_Interactiva_BarrancoJuan.ipynb  # Visualizaciones
+└── entrega2proy_EDA/                     # Análisis exploratorio original
+    └── matches_cleaned.csv
 ```
 
 ### 🚀 Instalación y Ejecución
@@ -54,9 +65,14 @@ pip install -r requirements.txt
 jupyter notebook Proy_4ta_Visualizacion_Interactiva_BarrancoJuan.ipynb
 ```
 
-#### 4. Ejecutar la aplicación Streamlit
+#### 4. Ejecutar la aplicación Streamlit (Versión Final)
 ```bash
-streamlit run tennis_app.py
+# Versión corregida y funcional para el examen
+cd version_final_corregida
+streamlit run tennis_app_final.py
+
+# O versión con funcionalidades adicionales
+streamlit run tennis_app_mejorada.py
 ```
 
 ### 📊 Funcionalidades de la Aplicación
@@ -97,12 +113,28 @@ streamlit run tennis_app.py
 2. **Heatmap Dinámico**: Performance por superficie y nivel de torneo
 3. **Dashboard Multi-Panel**: Comparativa de modelos con múltiples métricas
 
-### 📈 Resultados del Modelo
+### 📈 Resultados del Modelo (Versión Final Corregida)
 
-- **RMSE**: 35.84 minutos
-- **R²**: 0.2613
-- **Accuracy (Clasificación)**: 48.62%
-- **MAE**: 29.44 minutos
+- **RMSE**: 34.93 minutos (modelo de regresión)
+- **R²**: 0.307 (30.7% de varianza explicada)
+- **Accuracy (Clasificación)**: 47.0%
+- **MAE**: 28.26 minutos
+
+### 🔍 Estado del Proyecto para Examen Final
+
+#### ✅ Problemas Resueltos
+1. **Error de métricas**: Corregidos KeyError para 'rmse' y 'accuracy' → ahora usa 'rmse_regression' y 'accuracy_classification'
+2. **Funcionalidad inapropiada**: Removida completamente la sección de "Predicción de Ganadores" 
+3. **Formato académico**: Eliminados emojis excesivos y estilo informal
+4. **Contenido educativo**: Agregadas explicaciones de terminología de tenis
+5. **Claridad de datos**: Notas explicativas para valores "None" en tournament levels
+
+#### 🎯 Versión Recomendada para Evaluación
+**Archivo principal**: `version_final_corregida/tennis_app_final.py`
+- ✅ Sin errores de ejecución
+- ✅ Formato académico apropiado  
+- ✅ Funcionalidades educativas para no conocedores de tenis
+- ✅ Enfoque exclusivo en predicción de duración (no ganadores)
 
 ### 🔍 Insights Principales
 
